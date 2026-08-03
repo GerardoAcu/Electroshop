@@ -1,0 +1,249 @@
+/* ==================== HERO ==================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: 4.5rem 0 5rem;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__content .logo {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+}
+
+.hero__title {
+  color: var(--color-white);
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  max-width: 20ch;
+}
+
+.hero__description {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+/* Selectores compuestos (.btn + clase propia) para pisar la variante
+   base sin depender del orden de carga de los CSS */
+.btn.hero__btn-primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn.hero__btn-primary:hover {
+  background: var(--color-gray);
+}
+
+.btn.hero__btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.btn.hero__btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-white);
+}
+
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+}
+
+.hero__trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* ---- Visual decorativo ---- */
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.hero__blob {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.hero__icon-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.hero__icon-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  font-size: 2.1rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 22px;
+  box-shadow: 0 12px 24px rgba(20, 38, 92, 0.25);
+}
+
+.hero__icon-chip:nth-child(2n) {
+  margin-top: 1.5rem;
+}
+
+/* ==================== PRODUCTOS DESTACADOS ==================== */
+.featured {
+  background: var(--color-gray);
+  padding: 4rem 0 4.5rem;
+}
+
+.featured__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.featured__title {
+  font-size: 1.8rem;
+  margin: 0.3rem 0 0.35rem;
+}
+
+.featured__subtitle {
+  margin: 0;
+}
+
+.featured__link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.featured__link:hover {
+  text-decoration: underline;
+}
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.featured__error {
+  grid-column: 1 / -1;
+  color: var(--color-text-muted);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__visual {
+    min-height: 240px;
+    order: -1;
+  }
+
+  .hero__blob {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero__icon-chip {
+    width: 68px;
+    height: 68px;
+    font-size: 1.7rem;
+    border-radius: 18px;
+  }
+
+  .hero__content .logo {
+    margin: 1.1rem 0 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .hero__title {
+    max-width: none;
+  }
+
+  .hero__description {
+    max-width: none;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .hero__icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .hero__icon-chip {
+    width: 58px;
+    height: 58px;
+    font-size: 1.4rem;
+  }
+
+  .featured__grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__trust {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

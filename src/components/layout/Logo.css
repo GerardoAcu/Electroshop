@@ -1,0 +1,65 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo__mark {
+  display: block;
+  width: 40px;
+  height: 34px;
+}
+
+.logo__word {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.logo__word-electro {
+  color: var(--color-text-dark);
+}
+
+.logo__word-shop {
+  color: var(--color-primary);
+}
+
+.logo__word--light .logo__word-electro {
+  color: var(--color-white);
+}
+
+.logo__word--light .logo__word-shop {
+  color: var(--color-white);
+  opacity: 0.85;
+}
+
+/* ---- Tamaños ---- */
+.logo--icon .logo__mark {
+  width: 32px;
+  height: 28px;
+}
+
+.logo--lg .logo__mark {
+  width: 64px;
+  height: 55px;
+}
+
+.logo--lg .logo__word {
+  font-size: 2.25rem;
+}
+
+@media (max-width: 480px) {
+  .logo--lg .logo__mark {
+    width: 48px;
+    height: 41px;
+  }
+
+  .logo--lg .logo__word {
+    font-size: 1.7rem;
+  }
+}

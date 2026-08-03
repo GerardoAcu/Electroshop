@@ -1,0 +1,110 @@
+.catalog-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.catalog-toolbar__search {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-gray);
+  border-radius: var(--radius-lg);
+  padding: 0.65rem 1rem;
+}
+
+.catalog-toolbar__search-icon {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+}
+
+.catalog-toolbar__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+}
+
+.catalog-toolbar__search-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.catalog-toolbar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 1rem;
+}
+
+.catalog-toolbar__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  flex: 1 1 160px;
+  min-width: 150px;
+}
+
+.catalog-toolbar__field select {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.7rem;
+}
+
+.catalog-toolbar__clear {
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.catalog-toolbar__clear:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.catalog-results__count {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.catalog-results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .catalog-toolbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .catalog-toolbar__search {
+    flex: 1 1 280px;
+  }
+
+  .catalog-toolbar__filters {
+    flex: 2 1 auto;
+  }
+}

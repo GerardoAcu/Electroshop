@@ -1,0 +1,161 @@
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.order-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+}
+
+.order-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.order-card__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.order-card__date {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.order-card__status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.order-card__status--confirmado {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.order-card__status--enviado {
+  color: var(--color-primary);
+  background: var(--color-primary-light, #e0edff);
+}
+
+.order-card__status--entregado {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.order-card__status--cancelado {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.order-card__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.order-card__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.order-card__item a:hover {
+  text-decoration: underline;
+}
+
+.order-card__receipt {
+  background: var(--color-gray);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.order-card__receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.order-card__receipt-row span:last-child {
+  color: var(--color-text-dark);
+  font-weight: 600;
+}
+
+.order-card__receipt-toggle {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.order-card__receipt-toggle:hover {
+  text-decoration: underline;
+}
+
+.order-card__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.order-card__total {
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.order-card__cancel {
+  margin-top: 1rem;
+  background: none;
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+}
+
+.order-card__cancel:hover {
+  background: var(--color-danger-bg);
+}
+
+@media (max-width: 640px) {
+  .order-card {
+    padding: 1rem;
+  }
+
+  .order-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

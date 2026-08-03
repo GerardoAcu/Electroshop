@@ -1,0 +1,40 @@
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 640px;
+}
+
+.company-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.company-card h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.company-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.company-card p:last-child {
+  margin-bottom: 0;
+}
+
+.company-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+}
+
+.company-card--action p {
+  margin-bottom: 1rem;
+}

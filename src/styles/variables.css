@@ -1,0 +1,41 @@
+:root {
+  /* ---- Paleta de colores del proyecto ---- */
+  --color-primary: #1E3A8A;      /* Azul institucional */
+  --color-white: #FFFFFF;        /* Blanco */
+  --color-gray: #F3F4F6;         /* Gris de fondo */
+
+  /* Variaciones derivadas del azul primario (solo para estados hover/focus,
+     bordes y textos secundarios; el trio base pedido no cambia) */
+  --color-primary-light: #3B5BC4;
+  --color-primary-dark: #14265C;
+  --color-primary-50: #EEF1FB;
+
+  /* Escala de grises de apoyo */
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-600: #4B5563;
+
+  --color-text-dark: #111827;
+  --color-text-muted: #6B7280;
+  --color-danger: #DC2626;
+  --color-danger-bg: #FEF2F2;
+  --color-success: #16A34A;
+  --color-success-bg: #F0FDF4;
+  --color-warning: #D97706;
+  --color-warning-bg: #FFFBEB;
+
+  /* ---- Tipografía ---- */
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* ---- Layout ---- */
+  --header-height: 68px;
+  --bottom-nav-height: 60px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 3px rgba(17, 24, 39, 0.08);
+  --shadow-md: 0 4px 16px rgba(17, 24, 39, 0.10);
+  --max-width: 1200px;
+}

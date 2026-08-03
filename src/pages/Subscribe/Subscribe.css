@@ -1,0 +1,70 @@
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 420px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.subscribe-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.subscribe-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.subscribe-field input,
+.subscribe-field select {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.8rem;
+}
+
+.subscribe-field input:focus-visible,
+.subscribe-field select:focus-visible {
+  border-color: var(--color-primary);
+}
+
+.subscribe-error {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+}
+
+.subscribe-confirmation {
+  max-width: 420px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.subscribe-confirmation__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.subscribe-confirmation p {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .subscribe-form,
+  .subscribe-confirmation {
+    max-width: 100%;
+    padding: 1.1rem;
+  }
+}
